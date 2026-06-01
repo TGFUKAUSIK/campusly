@@ -1,0 +1,17 @@
+[33mcommit 6f5795a5d8706c941aee33cdd8b6a2d4296d1d77[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Kausik <kausik211007@gmail.com>
+Date:   Mon Jun 1 20:45:49 2026 +0530
+
+    remove campusly zip and add gitignore
+
+ campusly.zip | Bin [31m117041805[m -> [32m0[m bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+[33mcommit 8157072b1d5e15f9759409075f16fc56a65d8399[m
+Author: Kausik <kausik211007@gmail.com>
+Date:   Mon Jun 1 20:41:52 2026 +0530
+
+    feat: initial Campusly release with VTOP integration, Supabase sync, PWA support and mobile-first student dashboard
+
+ campusly.zip | Bin [31m0[m -> [32m117041805[m bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)

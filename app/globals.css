@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f4f7f3;
+  --foreground: #14211f;
+  --card: rgba(255, 255, 255, 0.78);
+  --card-solid: #ffffff;
+  --muted: #6d7d7a;
+  --line: rgba(35, 69, 64, 0.1);
+  --brand: #164d45;
+  --brand-soft: #d9eee7;
+  --warm: #ff8d72;
+  --tab: rgba(248, 251, 249, 0.88);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0e1716;
+    --foreground: #eff8f5;
+    --card: rgba(24, 39, 37, 0.82);
+    --card-solid: #182725;
+    --muted: #9fb2af;
+    --line: rgba(212, 237, 231, 0.12);
+    --brand: #7dd2bf;
+    --brand-soft: #1f3c38;
+    --warm: #ff9b84;
+    --tab: rgba(18, 31, 29, 0.9);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 12% -8%, rgba(209, 242, 226, 0.76), transparent 27rem),
+    radial-gradient(circle at 96% 10%, rgba(255, 219, 172, 0.34), transparent 25rem),
+    var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  touch-action: manipulation;
+}
+
+@layer components {
+  .glass-card {
+    border: 1px solid var(--line);
+    background: var(--card);
+    box-shadow: 0 18px 55px rgba(43, 72, 66, 0.08);
+    backdrop-filter: blur(22px);
+  }
+
+  .section-title {
+    @apply text-lg font-bold tracking-[-0.025em];
+  }
+
+  .section-kicker {
+    @apply text-[11px] font-bold uppercase tracking-[0.14em];
+    color: var(--muted);
+  }
+
+  .safe-top {
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+
+  .safe-bottom {
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
